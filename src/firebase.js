@@ -1,15 +1,16 @@
-import firebase from 'firebase';
+import firebase from 'firebase'
+const config = {
+    apiKey: "AIzaSyDblTESEB1SbAVkpy2q39DI2OHphL2-Jxw",
+    authDomain: "fun-food-friends-eeec7.firebaseapp.com",
+    databaseURL: "https://fun-food-friends-eeec7.firebaseio.com",
+    projectId: "fun-food-friends-eeec7",
+    storageBucket: "fun-food-friends-eeec7.appspot.com",
+    messagingSenderId: "144750278413"
+};
 
-// Initialize Firebase
-  const config = {
-    apiKey: "AIzaSyDqHZgjzStvHHkBB9Ie3c0eDWc7Moxdnc4",
-    authDomain: "fun-food-friends-8eab8.firebaseapp.com",
-    databaseURL: "https://fun-food-friends-8eab8.firebaseio.com",
-    projectId: "fun-food-friends-8eab8",
-    storageBucket: "fun-food-friends-8eab8.appspot.com",
-    messagingSenderId: "984357937799"
-  };
+firebase.initializeApp(config);
 
-  firebase.initializeApp(config);
+export const provider = new firebase.auth.GoogleAuthProvider();
+export const auth = firebase.auth();
 
-  export default firebase;
+export default firebase;
